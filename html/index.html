@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOONLIGHT EVENT</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+
+        <!-- Header Section -->
+        <header>
+            <div class="header-container">
+                <div class="logo-container">
+                    <img src="../images/logo.jpg" alt="Festival Portal Logo" class="logo">
+                    <h1 class="logo-text">Moonlight Event Portal</h1>
+                </div>
+                <div class="visitor-count">
+                    <i class="fas fa-users"></i>
+                    <span id="visitors">0</span> Visitors
+                </div>
+            </div>
+        </header>
+    
+        <!-- Banner Section -->
+        <div class="banner">
+            <div class="banner-images">
+                <img src="../images/backgroud2.jpg" alt="Diwali Festival" class="banner-image">
+                <img src="../images/background1.jpg" alt="Christmas Festival" class="banner-image">
+                <img src="../images/background3.jpg" alt="Eid Festival" class="banner-image">
+                <img src="../images/christmas.jpg" alt="Holi Festival" class="banner-image">
+            </div>
+            <div class="banner-text">
+                <h1>Discover World Festivals</h1>
+                <p>Explore cultural celebrations from around the globe</p>
+            </div>
+        </div>
+    
+        <!-- Navigation -->
+        <nav>
+            <div class="nav-container">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="menu">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#country">By Country</a></li>
+                    <li><a href="#religion">By Religion</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    
+        <!-- Main Content -->
+        <div class="container">
+            <!-- Country Category Section -->
+            <section id="country" class="category-section">
+                <h2 class="section-title">Festivals by Country</h2>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <img src="../images/diweli.jpg" alt="Indian Festivals" class="category-image">
+                        <div class="category-info">
+                            <h3>India</h3>
+                            <p>Explore vibrant festivals like Diwali, Holi, and Durga Puja.</p>
+                            <a href="#" class="view-btn" onclick="openModal('Diwali')">View Festivals</a>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <img src="../images/chinnn.jpg" alt="Chinese Festivals" class="category-image">
+                        <div class="category-info">
+                            <h3>China</h3>
+                            <p>Discover Chinese New Year, Lantern Festival, and more.</p>
+                            <a href="#" class="view-btn" onclick="openModal('Chinese New Year')">View Festivals</a>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <img src="../images/brazil.jpg" alt="Brazilian Festivals" class="category-image">
+                        <div class="category-info">
+                            <h3>Brazil</h3>
+                            <p>Experience the energy of Carnival and other Brazilian celebrations.</p>
+                            <a href="#" class="view-btn" onclick="openModal('Carnival')">View Festivals</a>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <img src="../images/mexico.jpg" alt="Mexican Festivals" class="category-image">
+                        <div class="category-info">
+                            <h3>Mexico</h3>
+                            <p>Celebrate Day of the Dead and other Mexican traditions.</p>
+                            <a href="#" class="view-btn" onclick="openModal('Day of the Dead')">View Festivals</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Religion Category Section -->
+            <section id="religion" class="category-section">
+                <h2 class="section-title">Festivals by Religion</h2>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <img src="../images/hindi.jpg" alt="Hindu Festivals" class="category-image">
+                        <div class="category-info">
+                            <h3>Hindu</h3>
+                            <p>Celebrations like Diwali, Holi, and Navratri with deep spiritual significance.</p>
+                            <a href="#" class="view-btn" onclick="openModal('Diwali')">View Festivals</a>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <img src="../images/christmas.jpg" alt="Christian Festivals" class="category-image">
+                        <div class="category-info">
+                            <h3>Christian</h3>
+                            <p>Christmas, Easter, and other important Christian celebrations.</p>
+                            <a href="#" class="view-btn" onclick="openModal('Christmas')">View Festivals</a>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <img src="../images/islamic festival.jpg" alt="Muslim Festivals" class="category-image">
+                        <div class="category-info">
+                            <h3>Muslim</h3>
+                            <p>Eid al-Fitr, Eid al-Adha, and other Islamic festivals.</p>
+                            <a href="#" class="view-btn" onclick="openModal('Eid al-Fitr')">View Festivals</a>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <img src="../images/buldshit festival.jpg" alt="Buddhist Festivals" class="category-image">
+                        <div class="category-info">
+                            <h3>Buddhist</h3>
+                            <p>Vesak, Songkran, and other Buddhist celebrations.</p>
+                            <a href="#" class="view-btn" onclick="openModal('Vesak')">View Festivals</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Filter Section -->
+            <section class="filter-section">
+                <h3 class="filter-title">Filter Festivals</h3>
+                <div class="filter-options">
+                    <div class="filter-group">
+                        <label for="religion-filter">By Religion</label>
+                        <select id="religion-filter">
+                            <option value="all">All Religions</option>
+                            <option value="hindu">Hindu</option>
+                            <option value="christian">Christian</option>
+                            <option value="muslim">Muslim</option>
+                            <option value="buddhist">Buddhist</option>
+                            <option value="jewish">Jewish</option>
+                            <option value="sikh">Sikh</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="month-filter">By Month</label>
+                        <select id="month-filter">
+                            <option value="all">All Months</option>
+                            <option value="january">January</option>
+                            <option value="february">February</option>
+                            <option value="march">March</option>
+                            <option value="april">April</option>
+                            <option value="may">May</option>
+                            <option value="june">June</option>
+                            <option value="july">July</option>
+                            <option value="august">August</option>
+                            <option value="september">September</option>
+                            <option value="october">October</option>
+                            <option value="november">November</option>
+                            <option value="december">December</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="country-filter">By Country</label>
+                        <select id="country-filter">
+                            <option value="all">All Countries</option>
+                            <option value="india">India</option>
+                            <option value="china">China</option>
+                            <option value="brazil">Brazil</option>
+                            <option value="mexico">Mexico</option>
+                            <option value="usa">USA</option>
+                            <option value="uk">UK</option>
+                            <option value="japan">Japan</option>
+                            <option value="thailand">Thailand</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Gallery Section -->
+            <section id="gallery">
+                <h2 class="section-title">Festival Gallery</h2>
+                <div class="gallery">
+                    <div class="gallery-item" onclick="openModal('Diwali')">
+                        <img src="../images/diweli2.jpg" alt="Diwali" class="gallery-image">
+                        <div class="gallery-caption">Diwali - Festival of Lights</div>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('Christmas')">
+                        <img src="../images/christmas festival.jpg" alt="Christmas" class="gallery-image">
+                        <div class="gallery-caption">Christmas</div>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('Holi')">
+                        <img src="../images/holi festival.jpg" alt="Holi" class="gallery-image">
+                        <div class="gallery-caption">Holi - Festival of Colors</div>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('Eid')">
+                        <img src="../images/eid festival.jpg" alt="Eid" class="gallery-image">
+                        <div class="gallery-caption">Eid al-Fitr</div>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('Carnival')">
+                        <img src="../images/carnival festival.jpg" alt="Carnival" class="gallery-image">
+                        <div class="gallery-caption">Carnival</div>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('Day of the Dead')">
+                        <img src="../images/day of the dead.jpg" alt="Day of the Dead" class="gallery-image">
+                        <div class="gallery-caption">Day of the Dead</div>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('Chinese New Year')">
+                        <img src="../images/chinese new year.jpg" alt="Chinese New Year" class="gallery-image">
+                        <div class="gallery-caption">Chinese New Year</div>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('Thanksgiving')">
+                        <img src="../images/thanks giving festival.jpg" alt="Thanksgiving" class="gallery-image">
+                        <div class="gallery-caption">Thanksgiving</div>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Feedback Section -->
+            <section id="feedback" class="feedback-section">
+                <h2 class="section-title">Share Your Festival Experience</h2>
+                <form class="feedback-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="festival">Favorite Festival</label>
+                        <select id="festival" name="festival">
+                            <option value="">Select a festival</option>
+                            <option value="diwali">Diwali</option>
+                            <option value="christmas">Christmas</option>
+                            <option value="eid">Eid</option>
+                            <option value="holi">Holi</option>
+                            <option value="carnival">Carnival</option>
+                            <option value="thanksgiving">Thanksgiving</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="country-select">Country</label>
+                        <select id="country-select" name="country">
+                            <option value="">Select your country</option>
+                            <option value="india">India</option>
+                            <option value="usa">United States</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="canada">Canada</option>
+                            <option value="australia">Australia</option>
+                            <option value="brazil">Brazil</option>
+                            <option value="china">China</option>
+                            <option value="japan">Japan</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="message">Your Festival Experience</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <button type="submit" class="submit-btn">Submit Feedback</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    
+        <!-- Footer -->
+        <footer>
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#country">Festivals by Country</a></li>
+                        <li><a href="#religion">Festivals by Religion</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#feedback">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Information</h3>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Site Map</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div id="about" class="footer-column">
+                    <h3>About Us</h3>
+                    <p>World Festival Portal is dedicated to celebrating and documenting cultural festivals from around the globe.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div id="contact" class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Festival Street, Culture City, CC 12345</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (123) 456-7890</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@festivalportal.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 World Festival Portal. All rights reserved.</p>
+            </div>
+        </footer>
+    
+        <!-- Ticker -->
+        <div class="ticker">
+            <div class="ticker-content">
+                <div class="ticker-item">
+                    <span id="current-date"></span> | <span id="current-time"></span> | Your Location: <span id="user-location">Loading...</span>
+                </div>
+                <div class="ticker-item">
+                    Explore world festivals and cultural celebrations | Learn about traditions from around the globe
+                </div>
+            </div>
+        </div>
+    
+        <!-- Modal -->
+        <div id="festival-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="modal-title">Festival Name</h2>
+                    <button class="close-btn" onclick="closeModal()">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="festival-images">
+                    </div>
+                    <div class="festival-details">
+                        <h3>About the Festival</h3>
+                        <p id="festival-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.</p>
+                        
+                        <h3>Historical Significance</h3>
+                        <p id="festival-history">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+                        
+                        <h3>Celebration Details</h3>
+                        <p id="festival-celebration">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+                    </div>
+                    <button class="download-btn" onclick="downloadFestivalInfo()">
+                        <i class="fas fa-download"></i> Download Festival Info
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <script src="../js/index.js"></script>
+    
+</body>
+</html>
